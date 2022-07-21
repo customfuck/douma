@@ -1,6 +1,3 @@
-# By @TroJanzHEX
-# Improved by TeamDaisyX
-
 from pyrogram import filters
 from pyrogram.types import (
     CallbackQuery,
@@ -111,9 +108,15 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                     ]
                 ),
             )
+            
+@pbot.on_message(filters.command(["yo", "hehe"]))
+async def photo(client: pbot, message: Message):
+   await client.send_message(
+      chat_id=message.chat.id,
+      text="Select your required mode from below!ㅤㅤ",
 
 
-__mod_name__ = "Img Editor​ 📸"
+__mod_name__ = "Generation"
 
 __help__ = """
 ❍ `/edit` : To edit the image.
