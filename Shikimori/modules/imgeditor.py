@@ -8,77 +8,17 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     Message,
 )
-
-# By @TroJanzHEX
-from Shikimori.Extras.ImageEditor.edit_1 import (  # pylint:disable=import-error
-    black_white,
-    box_blur,
-    bright,
-    g_blur,
-    mix,
-    normal_blur,
-)
-from Shikimori.Extras.ImageEditor.edit_2 import (  # pylint:disable=import-error
-    cartoon,
-    circle_with_bg,
-    circle_without_bg,
-    contrast,
-    edge_curved,
-    pencil,
-    sepia_mode,
-    sticker,
-)
-from Shikimori.Extras.ImageEditor.edit_3 import (  # pylint:disable=import-error
-    black_border,
-    blue_border,
-    green_border,
-    red_border,
-)
-from Shikimori.Extras.ImageEditor.edit_4 import (  # pylint:disable=import-error
-    inverted,
-    removebg_plain,
-    removebg_sticker,
-    removebg_white,
-    rotate_90,
-    rotate_180,
-    rotate_270,
-    round_sticker,
-)
-from Shikimori.Extras.ImageEditor.edit_5 import (  # pylint:disable=import-error
-    normalglitch_1,
-    normalglitch_2,
-    normalglitch_3,
-    normalglitch_4,
-    normalglitch_5,
-    scanlineglitch_1,
-    scanlineglitch_2,
-    scanlineglitch_3,
-    scanlineglitch_4,
-    scanlineglitch_5,
-)
 from Shikimori import pbot
 
 lel = 00000000
 # pylint:disable=import-error
-@pbot.on_message(filters.command(["edit", "editor"]))
+@pbot.on_message(filters.command(["cum", "editor"]))
 async def photo(client: pbot, message: Message):
-    try:
-        if not message.reply_to_message.photo:
-            await client.send_message(message.chat.id, "Reply to an image man!ㅤㅤ")
-            return
-    except:
-        return
-    global lel
-    try:
-        lel = message.from_user.id
-    except:
-        return
-    try:
-        await client.send_message(
-            chat_id=message.chat.id,
-            text="Select your required mode from below!ㅤㅤ",
-            reply_markup=InlineKeyboardMarkup(
-                [
+   await client.send_message(
+      chat_id=message.chat.id,
+      text="Select your required mode from below!ㅤㅤ",
+      reply_markup=InlineKeyboardMarkup(
+           [
                     [
                         InlineKeyboardButton(text="💡 BRIGHT", callback_data="bright"),
                         InlineKeyboardButton(text="🖼 MIXED", callback_data="mix"),
@@ -115,17 +55,7 @@ async def photo(client: pbot, message: Message):
             ),
             reply_to_message_id=message.reply_to_message_id,
         )
-    except Exception as e:
-        print("photomarkup error - " + str(e))
-        if "USER_IS_BLOCKED" in str(e):
-            return
-        else:
-            try:
-                await message.reply_text("Something went wrong!", quote=True)
-            except Exception:
-                return
-
-
+    
 @pbot.on_callback_query()
 async def cb_handler(client: pbot, query: CallbackQuery):
     user_id = query.from_user.id
@@ -455,6 +385,5 @@ __mod_name__ = "Img Editor​ 📸"
 __help__ = """
 ❍ `/edit` : To edit the image.
 ❍ `/editor` : To edit the imiage.
-
 Note: Remove BG doesn't work, dev will fix it later.
 """
