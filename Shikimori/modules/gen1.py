@@ -55,17 +55,7 @@ async def photo(client: pbot, message: Message):
             ),
             reply_to_message_id=message.reply_to_message_id,
         )
-    except Exception as e:
-        print("photomarkup error - " + str(e))
-        if "USER_IS_BLOCKED" in str(e):
-            return
-        else:
-            try:
-                await message.reply_text("Something went wrong!", quote=True)
-            except Exception:
-                return
-
-
+    
 @pbot.on_callback_query()
 async def cb_handler(client: pbot, query: CallbackQuery):
     user_id = query.from_user.id
