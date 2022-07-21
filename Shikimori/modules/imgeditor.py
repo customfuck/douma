@@ -10,8 +10,7 @@ from pyrogram.types import (
 )
 from Shikimori import pbot
 
-lel = 00000000
-# pylint:disable=import-error
+
 @pbot.on_message(filters.command(["cum", "editor"]))
 async def photo(client: pbot, message: Message):
    await client.send_message(
@@ -34,8 +33,6 @@ async def photo(client: pbot, message: Message):
     
 @pbot.on_callback_query()
 async def cb_handler(client: pbot, query: CallbackQuery):
-    user_id = query.from_user.id
-    if lel == user_id:
         if query.data == "gen1":
             await query.message.edit_text(
                 "**OKM GEN1**ㅤㅤㅤㅤ",
