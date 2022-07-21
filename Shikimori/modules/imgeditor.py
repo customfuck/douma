@@ -109,13 +109,6 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                 ),
             )
             
-@pbot.on_message(filters.command(["yo", "hehe"]))
-async def photo(client: pbot, message: Message):
-   await client.send_message(
-      chat_id=message.chat.id,
-      text="Select your required mode from below!ㅤㅤ")
-      reply_to_message_id=message.reply_to_message_id
-
 
 __mod_name__ = "Generation"
 
