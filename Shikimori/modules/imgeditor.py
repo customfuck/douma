@@ -454,7 +454,7 @@ __mod_name__ = "Img Editor​ 📸"
 
 __help__ = """
 ❍ `/edit` : To edit the image.
-❍ `/editor` : To edit the image.
+❍ `/editor` : To edit the imiage.
 
 Note: Remove BG doesn't work, dev will fix it later.
 """
