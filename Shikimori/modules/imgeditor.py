@@ -5,12 +5,58 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     Message,
 )
+from Shikimori.Extras.ImageEditor.edit_1 import (  # pylint:disable=import-error
+    black_white,
+    box_blur,
+    bright,
+    g_blur,
+    mix,
+    normal_blur,
+)
+from Shikimori.Extras.ImageEditor.edit_2 import (  # pylint:disable=import-error
+    cartoon,
+    circle_with_bg,
+    circle_without_bg,
+    contrast,
+    edge_curved,
+    pencil,
+    sepia_mode,
+    sticker,
+)
+from Shikimori.Extras.ImageEditor.edit_3 import (  # pylint:disable=import-error
+    black_border,
+    blue_border,
+    green_border,
+    red_border,
+)
+from Shikimori.Extras.ImageEditor.edit_4 import (  # pylint:disable=import-error
+    inverted,
+    removebg_plain,
+    removebg_sticker,
+    removebg_white,
+    rotate_90,
+    rotate_180,
+    rotate_270,
+    round_sticker,
+)
+from Shikimori.Extras.ImageEditor.edit_5 import (  # pylint:disable=import-error
+    normalglitch_1,
+    normalglitch_2,
+    normalglitch_3,
+    normalglitch_4,
+    normalglitch_5,
+    scanlineglitch_1,
+    scanlineglitch_2,
+    scanlineglitch_3,
+    scanlineglitch_4,
+    scanlineglitch_5,
+)
 from Shikimori import pbot
 
-lel = 00000000
 @pbot.on_message(filters.command(["generation", "generations"]))
 async def photo(client: pbot, message: Message):
       await client.send_message(
+            chat_id=message.chat.id,
             text="SELECT FROM THE GENERATION U WANT TO SEE",
             reply_markup=InlineKeyboardMarkup(
                [
