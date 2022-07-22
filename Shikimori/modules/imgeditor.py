@@ -10,20 +10,7 @@ from Shikimori import pbot
 lel = 00000000
 @pbot.on_message(filters.command(["generation", "generations"]))
 async def photo(client: pbot, message: Message):
-   try:
-        if message.reply_to_message.photo:
-            await client.send_message(message.chat.id, "Dont reply to an imageㅤ")
-            return
-    except:
-        return
-    global lel
-    try:
-        lel = message.from_user.id
-    except:
-        return
-    try:
-        await client.send_message(
-            chat_id=message.chat.id,
+      await client.send_message(
             text="SELECT FROM THE GENERATION U WANT TO SEE",
             reply_markup=InlineKeyboardMarkup(
                [
@@ -246,12 +233,3 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                 ),
             )
             
-
-__mod_name__ = "Generation"
-
-__help__ = """
-❍ `/edit` : To edit the image.
-❍ `/editor` : To edit the imiage.
-Note: Remove BG doesn't work, dev will fix it later.
-"""
-
