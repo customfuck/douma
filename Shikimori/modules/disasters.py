@@ -495,7 +495,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 
 
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Slaves:</b>\n"
+    reply = "<b>Known TRUSTED:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -513,7 +513,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 
 
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Peasants:</b>\n"
+    reply = "<b>Known Y MODS:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -534,7 +534,7 @@ def supportlist(update: Update, context: CallbackContext):
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
-    reply = "<b>Known Servants:</b>\n"
+    reply = "<b>Known X MODS:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -553,7 +553,7 @@ def sudolist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Friends:</b>\n"
+    reply = "<b>Known Z MODS:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
