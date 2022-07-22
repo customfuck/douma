@@ -88,12 +88,12 @@ def Shikimori_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton(text="Github", callback_data="github_"),
-                    InlineKeyboardButton(text="License", callback_data="license_"),
+                    InlineKeyboardButton(text="X MOD", callback_data="github_"),
+                    InlineKeyboardButton(text="Y MOD", callback_data="license_"),
                     ],
                     [
                     HMMM,
-                    InlineKeyboardButton(text="Documentation", url="https://some1hing.gitbook.io/shikimori-bot/"),
+                    InlineKeyboardButton(text="OWNER", url="https://t.me/BAJIKEISUKEKUN"),
                     ],
                     [
                     InlineKeyboardButton(text="Back", callback_data="Shikimori_back"),
@@ -120,14 +120,14 @@ def git_call_back(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "github_":
         query.message.edit_text(
-            text=f"Orginal Repositiory created by [SOME1HING](https://github.com/SOME-1HING) on [github](https://github.com/SOME-1HING/ShikimoriBot) for [Shikimori Bot](https://t.me/micchon_shikimori_bot)",
+            text=f"X MOD IS FEDERATION OF PEOPLE",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton(text="Repo", url="https://github.com/SOME-1HING/ShikimoriBot"),
-                    InlineKeyboardButton(text="Creator", url="https://github.com/SOME-1HING"),
+                    InlineKeyboardButton(text="NEWS", url="https://t.me/XMODNEWS"),
+                    InlineKeyboardButton(text="BANS", url="https://t.me/XMODBANS"),
                     ],
                     [
                     InlineKeyboardButton(text="Back", callback_data="Shikimori_"),
@@ -185,13 +185,13 @@ def license_call_back(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "license_":
         query.message.edit_text(
-            text=f"\n\n_{bot_name}'s licensed under the GNU General Public License v3.0_",
+            text=f"\n\n_{bot_name}'s Y MOD RANK",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton(text="License", url="https://github.com/SOME-1HING/ShikimoriBot/blob/master/LICENSE"),
+                    InlineKeyboardButton(text="Y MOD", url="https://t.me/xmodnews/6"),
                     ],
                     [
                     InlineKeyboardButton(text="Back", callback_data="Shikimori_"),
