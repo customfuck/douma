@@ -7,14 +7,19 @@ from pyrogram.types import (
 )
 from Shikimori import pbot
 
-
+lel = 00000000
 @pbot.on_message(filters.command(["generation", "generations"]))
 async def photo(client: pbot, message: Message):
-   await client.send_message(
-      chat_id=message.chat.id,
-      text="SELECT FROM THE GENERATION U WANT TO SEE",
-      reply_markup=InlineKeyboardMarkup(
-           [
+   try:
+        lel = message.from_user.id
+    except:
+        return
+    try:
+        await client.send_message(
+            chat_id=message.chat.id,
+            text="SELECT FROM THE GENERATION U WANT TO SEE",
+            reply_markup=InlineKeyboardMarkup(
+               [
                     [
                         InlineKeyboardButton(text="GEN1", callback_data="gen1"),
                         InlineKeyboardButton(text="GEN2", callback_data="gen2"),
@@ -242,3 +247,4 @@ __help__ = """
 ❍ `/editor` : To edit the imiage.
 Note: Remove BG doesn't work, dev will fix it later.
 """
+
