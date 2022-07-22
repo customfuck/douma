@@ -11,6 +11,13 @@ lel = 00000000
 @pbot.on_message(filters.command(["generation", "generations"]))
 async def photo(client: pbot, message: Message):
    try:
+        if message.reply_to_message.photo:
+            await client.send_message(message.chat.id, "Dont reply to an imageㅤ")
+            return
+    except:
+        return
+    global lel
+    try:
         lel = message.from_user.id
     except:
         return
