@@ -8,7 +8,7 @@ from pyrogram.types import (
 from Shikimori import pbot
 
 
-@pbot.on_message(filters.command(["cum", "editor"]))
+@pbot.on_message(filters.command(["generation", "generations"]))
 async def photo(client: pbot, message: Message):
    await client.send_message(
       chat_id=message.chat.id,
@@ -18,11 +18,16 @@ async def photo(client: pbot, message: Message):
                     [
                         InlineKeyboardButton(text="GEN1", callback_data="gen1"),
                         InlineKeyboardButton(text="GEN2", callback_data="gen2"),
-                        InlineKeyboardButton(text="GEN3", callback_data="gen3"),
+                        InlineKeyboardButton(text="GEN3", callback_data="gen3")
                     ],
                     [
                         InlineKeyboardButton(text="GEN4", callback_data="gen4"),
+                        InlineKeyboardButton(text="GEN5", callback_data="gen5"),
+                        InlineKeyboardButton(text="GEN6", callback_data="gen6")
                     ],
+                    [
+                        InlineKeyboardButton(text="GEN7", callback_data="gen7"),
+                    ]
                 ]
             ),
             reply_to_message_id=message.reply_to_message_id,
@@ -108,6 +113,7 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                     ]
                 ),
             )
+            
             
 
 __mod_name__ = "Generation"
