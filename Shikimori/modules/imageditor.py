@@ -1,34 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@CUSTOMFAIL
-SOME-1HING /
-ShikimoriBot
-Public
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-ShikimoriBot/Shikimori/modules/imgeditor.py.txt
-@SOME-1HING
-SOME-1HING hmm
-Latest commit 3482666 7 days ago
-History
-1 contributor
-460 lines (413 sloc) 16 KB
-# By @TroJanzHEX
-# Improved by TeamDaisyX
-
 from pyrogram import filters
 from pyrogram.types import (
     CallbackQuery,
@@ -482,24 +451,6 @@ __mod_name__ = "Img Editor​ 📸"
 
 __help__ = """
 ❍ `/edit` : To edit the image.
-❍ `/editor` : To edit the image.
-
+❍ `/editor` : To edit the imiage.
 Note: Remove BG doesn't work, dev will fix it later.
 """
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-You have no unread notifications
