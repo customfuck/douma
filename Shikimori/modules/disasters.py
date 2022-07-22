@@ -681,19 +681,19 @@ Group admins/group owners do not need these commands.
 Visit @{SUPPORT_CHAT} for more information.
 """
 
-SUDO_HANDLER = CommandHandler(("addfriend", "addsudo", "adddragon"), addsudo, run_async=True)
+SUDO_HANDLER = CommandHandler(("addfriend", "addzmod", "adddragon"), addsudo, run_async=True)
 SUPPORT_HANDLER = CommandHandler(("addsupport", "addxmod", "adddemon"), addsupport, run_async=True)
-TIGER_HANDLER = CommandHandler(("addpeasant", "addtiger"), addtiger, run_async=True)
-WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addslave", "addwolf"), addwhitelist, run_async=True)
-UNSUDO_HANDLER = CommandHandler(("removesudo", "removefriend", "removedragon"), removesudo, run_async=True)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removeservant", "removedemon"), removesupport, run_async=True)
-UNTIGER_HANDLER = CommandHandler(("removepeasant", "removetiger"), removetiger, run_async=True)
-UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removeslave", "removewolf"), removewhitelist, run_async=True)
+TIGER_HANDLER = CommandHandler(("addymod", "addtiger"), addtiger, run_async=True)
+WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addtrusted", "addwolf"), addwhitelist, run_async=True)
+UNSUDO_HANDLER = CommandHandler(("removesudo", "removezmod", "removedragon"), removesudo, run_async=True)
+UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removexmod", "removedemon"), removesupport, run_async=True)
+UNTIGER_HANDLER = CommandHandler(("removepeasant", "removeymod"), removetiger, run_async=True)
+UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removetrusted", "removewolf"), removewhitelist, run_async=True)
 
-WHITELISTLIST_HANDLER = CommandHandler(["slavelist", "slaves", "wolves", "wolflist"], whitelistlist, run_async=True)
-TIGERLIST_HANDLER = CommandHandler(["peasantlist", "peasants", "tigers", "tigerlist"], tigerlist, run_async=True)
-SUPPORTLIST_HANDLER = CommandHandler(["servantlist", "servants", "demons", "demonlist"], supportlist, run_async=True)
-SUDOLIST_HANDLER = CommandHandler(["friendlist", "friends", "sudos", "dragons", "sudolist", "dragonlist"], sudolist, run_async=True)
+WHITELISTLIST_HANDLER = CommandHandler(["slavelist", "listtrusted", "wolves", "wolflist"], whitelistlist, run_async=True)
+TIGERLIST_HANDLER = CommandHandler(["peasantlist", "listymods", "tigers", "tigerlist"], tigerlist, run_async=True)
+SUPPORTLIST_HANDLER = CommandHandler(["servantlist", "listxmods", "demons", "demonlist"], supportlist, run_async=True)
+SUDOLIST_HANDLER = CommandHandler(["friendlist", "listzmods", "sudos", "dragons", "sudolist", "dragonlist"], sudolist, run_async=True)
 DEVLIST_HANDLER = CommandHandler(["devlist", "bestfriends", "devs"], devlist, run_async=True)
 
 dispatcher.add_handler(SUDO_HANDLER)
