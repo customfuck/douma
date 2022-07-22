@@ -10,10 +10,11 @@ from Shikimori import pbot
 
 @pbot.on_message(filters.command(["generation", "generations"]))
 async def photo(client: pbot, message: Message):
-   await client.send_message(
-      chat_id=message.chat.id,
-      text="SELECT FROM THE GENERATION U WANT TO SEE",
-      reply_markup=InlineKeyboardMarkup(
+    user_id = message.from_user.id
+    client.send_message(
+        chat_id=message.chat.id,
+        text="SELECT FROM THE GENERATION U WANT TO SEE",
+        reply_markup=InlineKeyboardMarkup(
            [
                     [
                         InlineKeyboardButton(text="GEN1", callback_data="gen1"),
