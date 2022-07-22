@@ -5,7 +5,7 @@ from telethon import events, Button
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
 from pyrogram import __version__ as pyrover
-from shikimori.events import register
+from Shikimori.events import register
 from Shikimori import telethn as tbot
 
 
