@@ -47,12 +47,21 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                             InlineKeyboardButton(
                                 text="GEN3", callback_data="gen3"
                             ),
-                        ],
-                        [
                             InlineKeyboardButton(
                                 text="GEN4", callback_data="gen4"
                             )
                         ],
+                        [
+                            InlineKeyboardButton(
+                                text="GEN5", callback_data="gen5"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN6", callback_data="gen6"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN7", callback_data="gen7"
+                            )
+                        ]
                     ]
                 ),
             )
@@ -66,12 +75,21 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                             InlineKeyboardButton(
                                 text="GEN3", callback_data="gen3"
                             ),
-                        ],
-                        [
                             InlineKeyboardButton(
                                 text="GEN4", callback_data="gen4"
                             )
                         ],
+                        [
+                            InlineKeyboardButton(
+                                text="GEN5", callback_data="gen5"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN6", callback_data="gen6"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN7", callback_data="gen7"
+                            )
+                        ]
                     ]
                 ),
             )
@@ -85,12 +103,21 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                             InlineKeyboardButton(
                                 text="GEN2", callback_data="gen2"
                             ),
-                        ],
-                        [
                             InlineKeyboardButton(
                                 text="GEN4", callback_data="gen4"
                             )
                         ],
+                        [
+                            InlineKeyboardButton(
+                                text="GEN5", callback_data="gen5"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN6", callback_data="gen6"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN7", callback_data="gen7"
+                            )
+                        ]
                     ]
                 ),
             ) 
@@ -104,16 +131,108 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                             InlineKeyboardButton(
                                 text="GEN2", callback_data="gen2"
                             ),
-                        ],
-                        [
                             InlineKeyboardButton(
                                 text="GEN3", callback_data="gen3"
                             )
                         ],
+                        [
+                            InlineKeyboardButton(
+                                text="GEN5", callback_data="gen5"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN6", callback_data="gen6"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN7", callback_data="gen7"
+                            )
+                        ]
                     ]
                 ),
             )
-            
+        elif query.data == "gen5":
+            await query.message.edit(
+                "**OWO GEN5**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(text="GEN1", callback_data="gen1"),
+                            InlineKeyboardButton(
+                                text="GEN2", callback_data="gen2"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN3", callback_data="gen3"
+                            )
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="GEN4", callback_data="gen4"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN6", callback_data="gen6"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN7", callback_data="gen7"
+                            )
+                        ]
+                    ]
+                ),
+            )
+        elif query.data == "gen6":
+            await query.message.edit(
+                "**OWO GEN6**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(text="GEN1", callback_data="gen1"),
+                            InlineKeyboardButton(
+                                text="GEN2", callback_data="gen2"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN3", callback_data="gen3"
+                            )
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="GEN4", callback_data="gen4"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN5", callback_data="gen5"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN7", callback_data="gen7"
+                            )
+                        ]
+                    ]
+                ),
+            )
+        elif query.data == "gen7":
+            await query.message.edit(
+                "**OWO GEN7**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(text="GEN1", callback_data="gen1"),
+                            InlineKeyboardButton(
+                                text="GEN2", callback_data="gen2"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN3", callback_data="gen3"
+                            )
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="GEN4", callback_data="gen4"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN5", callback_data="gen5"
+                            ),
+                            InlineKeyboardButton(
+                                text="GEN6", callback_data="gen6"
+                            )
+                        ]
+                    ]
+                ),
+            )
             
 
 __mod_name__ = "Generation"
