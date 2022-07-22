@@ -30,23 +30,3 @@ async def awake(event):
       ]
     ]
   await tbot.send_message(event.chat_id, TEXT,  buttons=BUTTON)
-
-
-@register(pattern=("/chatgroup"))
-async def awake(event):
-  TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
-  TEXT += "❍ **HERE ARE 3 CHAT GRPS WHERE U CAN TALK RELATED TO HEXA** \n\n"
-  TEXT += "❍ **JOIN THESE TO ENJOY HEXA..... INVITE FRIENDS..... MAKE FRIENDS.....** \n\n"
-
-  BUTTON = [
-      [
-          Button.url("CHATTERPOKE", "https://t.me/ChatterPokeandHexa")
-      ],
-      [
-          Button.url("GANGLAND", "https://t.me/killers69")
-      ],
-      [
-          Button.url("AKATSUKI", "https://t.me/HEXA_AKATSUKI")
-      ]
-    ]
-  await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
