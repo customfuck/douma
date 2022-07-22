@@ -153,7 +153,7 @@ def hpmanager(user):
 
 def make_bar(per):
     done = min(round(per / 10), 10)
-    return "❤" * done + "♡" * (10 - done)
+    return "■" * done + "□" * (10 - done)
 
 
 def get_id(update: Update, context: CallbackContext):
@@ -254,10 +254,10 @@ def info(update: Update, context: CallbackContext):
     [
                         InlineKeyboardButton(
                              text="Health",
-                             url="https://t.me/Shikimori_bot_Updates/9"),
+                             url="https://t.me/xmodnews/4"),
                        InlineKeyboardButton(
-                             text="Disasters",
-                             url="https://t.me/Shikimori_bot_Updates/6"),
+                             text="X MOD",
+                             url="https://t.me/xmodnews/2"),
                     ],
     ]
     user_id = extract_user(update.effective_message, args)
@@ -321,21 +321,21 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person is my 'Owner'."
+        text += "\n\n𝙾𝚆𝙽𝙴𝚁 𝙾𝙵 𝚃𝙷𝙴 𝙱𝙾𝚃."
     elif user.id in DEV_USERS:
-        text += "\n\nThis person is my 'Best Friend'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis person is my 'Friend'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝚉 𝙼𝙾𝙳."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis person is my 'Servant'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝚇 𝙼𝙾𝙳."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThis person is just a 'Peasant'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝚈 𝙼𝙾𝙳."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis person is just a 'Slave'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝚃𝚁𝚄𝚂𝚃𝙴𝙳."
         disaster_level_present = True
 
 
