@@ -415,6 +415,52 @@ def natures(update: Update, context: CallbackContext):
         "Nature are a mechanic that influences how a Pokémon stats grow.\nNature effect is limited to only 10%.\nHere are the list of commands\n\n/hardy - About hardy natured pokemon.\n/lonely - About lonely natured pokemon.\n/brave - About brave natured pokemon.\n/adamant - About adamant natured pokemon.\n/naughty - About naughty natured pokemon.\n/bold - About bold natured pokemon.\n/docile - About docile natured pokemon.\n/relaxed - About relaxed natured pokemon.\n/impish - About impish natured pokemon.\n/lax - About lax natured pokemon.\n/modest - About modest natured pokemon.\n/mild - About mild natured pokemon.\n/serious - About serious natured pokemon.\n/quiet - About quiet natured pokemon.\n/rash - About rash natured pokemon.\n/calm - About calm natured pokemon.\n/gentle - About gentle natured pokemon.\n/sassy - About sassy natured pokemon.\n/bashful - About bashful natured pokemon.\n/careful - About careful natured pokemon.\n/timid - About timid natured pokemon.\n/hasty - About hasty natured pokemon.\n/jolly - About jolly natured pokemon.\n/naive - About naive natured pokemon.\n/quirky - About quirky natured pokemon",
     )
     
+def attack(update: Update, context: CallbackContext):
+    msg = update.effective_message
+    reply_text = (
+        msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    )
+    reply_text(
+        "3 ATTACK POKEMONS\n\nNORMAL\n\n👉 Nidoking\n👉 Machamp\n👉 Victreebel\n👉 Dragonite\n👉 Tyranitar\n👉 Blaziken\n👉 Swampert\n👉 Shiftry\n👉 Salamence\n👉 Staraptor\n👉 Luxray\n👉 Garchomp\n👉 Rhyperior\n👉 Electivire\n👉 Mamoswine\n👉 Gallade\n👉 Emboar\n👉 Stoutland\n👉 Unfezant\n👉 Gigalith\n👉 Conkeldurr\n👉 Leavanny\n👉 Krookodile\n👉 Eelektross\n👉 Haxorus\n👉 Decidueye\n👉 Incineroar\n👉 Toucannon\n👉 Tsareena\n\nLEGENDARY\n\n👉 Groudon\n👉 Regigigas\n👉 Tornadus(Incarnate Forme)\n👉 Thundurus(Incarnate Forme)\n👉 Landorus(Therian Forme)\n👉 Terrakion\n👉 Zekrom\n👉 Kyurem(Black)\n👉 Tapu Bulu\n👉 Solgalao\n👉 Kartana\n👉 Necrozma Dusk mane\n👉 Melmetal",
+    )
+
+def defence(update: Update, context: CallbackContext):
+    msg = update.effective_message
+    reply_text = (
+        msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    )
+    reply_text(
+        "3 DEFENCE POKEMONS\n\nNORMAL\n\n👉 Poliwrath\n👉 Golem\n👉 Aggron\n👉 Metagross\n👉 Klinklang\n👉 Chesnaught\n👉 Kommo-o\n\nLEGENDARY\n\n👉 Regirock\n👉 Cobalion\n👉 Stakataka  ",
+    )
+
+def spa(update: Update, context: CallbackContext):
+    msg = update.effective_message
+    reply_text = (
+        msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    )
+    reply_text(
+        "3 SPECIAL ATTACK POKEMONS\n\nNORMAL\n\n👉 Charizard\n👉 Vileplume\n👉 Alakazam\n👉 Gengar\n👉 Typhlosion\n👉 Ampharos\n👉 Beautifly\n👉 Gardevoir\n👉 Empolion\n👉 Roserade\n👉 Magnezone\n👉 Magmortar\n👉 Porygon-Z \n👉 Samurott\n👉 Reuniclus\n👉 Vanilluxe\n👉 Chandelure\n👉 Hydreigon\n👉 Volcarona\n👉 Delphox\n👉 Primarina\n👉 Vikavolt\n\nLEGENDARY\n\n👉 Zapdos\n👉 Moltres\n👉 Mewtwo\n👉 Latios\n👉 Kyogre\n👉 Dialga\n👉 Palkia\n👉 Reshiram\n👉 Volcanion\n👉 Lunala\n👉 Xurkitree\n👉 Magearna\n👉 Naganadel\n👉 Blacephalon\n👉 Tapu Lele\n👉 Heatran\n👉 Thundurus(Therian Forme)\n👉 Landorus(Incarnate Forme)\n👉 Keldeo(Ordinary/Resolute)\n👉 Kyurem(White)\n👉 Hoopa(Confined/Unbound)\n👉 Necrozma Dawn Wings",
+    )
+
+def spd(update: Update, context: CallbackContext):
+    msg = update.effective_message
+    reply_text = (
+        msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    )
+    reply_text(
+        "3 SPECIAL DEFENCE POKEMONS\n\nNORMAL\n\n👉 Blastoise\n👉 Bellossom\n👉 Politoed\n👉 Dustox\n👉 Ludicolo\n👉 Gothitelle\n👉 Florges\n👉 Goodra\n\nLEGENDARY\n\n👉 Articuno\n👉 Lugia\n👉 Ho-oh\n👉 Regice\n👉 Latias\n👉 Cresselia\n👉 Virizion\n👉 Tapu Fini\n👉 Nihilego",
+    )
+
+def speed(update: Update, context: CallbackContext):
+    msg = update.effective_message
+    reply_text = (
+        msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    )
+    reply_text(
+        "3 SPEED POKEMONS\n\nNORMAL\n\n👉 Pidgeot\n👉 Raichu\n👉 Crobat\n👉 Jumpluff\n👉 Sceptile\n👉 Serperior\n👉 Greninja\n👉 Talonflame\n\nLEGENDARY\n\n👉 Shaymin\n👉 Scolipede\n👉 Pheromosa\n👉 Zeraora\n👉 Tapu Koko\n👉 Tornadus(Therian Forme)\n👉 Deoxys(Speed Forme)",
+    )
+
+    
 
 LONELY_HANDLER = DisableAbleCommandHandler("lonely", lonely, run_async=True)
 BRAVE_HANDLER = DisableAbleCommandHandler("brave", brave, run_async=True)
@@ -461,6 +507,11 @@ DARK_HANDLER = DisableAbleCommandHandler("dark", dark, run_async=True)
 FAIRY_HANDLER = DisableAbleCommandHandler("fairy", fairy, run_async=True)
 GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
 NATURES_HANDLER = DisableAbleCommandHandler("natures", natures, run_async=True)
+ATTACK_HANDLER = DisableAbleCommandHandler("attack", attack, run_async=True)
+DEFENCE_HANDLER = DisableAbleCommandHandler("defence", defence, run_async=True)
+SPA_HANDLER = DisableAbleCommandHandler("spa", spa, run_async=True)
+SPD_HANDLER = DisableAbleCommandHandler("spd", spd, run_async=True)
+SPEED_HANDLER = DisableAbleCommandHandler("speed", speed, run_async=True)
 
 dispatcher.add_handler(LONELY_HANDLER)
 dispatcher.add_handler(BRAVE_HANDLER)
@@ -507,3 +558,8 @@ dispatcher.add_handler(DARK_HANDLER)
 dispatcher.add_handler(FAIRY_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(NATURES_HANDLER)
+dispatcher.add_handler(ATTACK_HANDLER)
+dispatcher.add_handler(DEFENCE_HANDLER)
+dispatcher.add_handler(SPA_HANDLER)
+dispatcher.add_handler(SPD_HANDLER)
+dispatcher.add_handler(SPEED_HANDLER)
