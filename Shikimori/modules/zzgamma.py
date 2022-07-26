@@ -9,7 +9,7 @@ from Shikimori.events import register
 from Shikimori import telethn as tbot
 
 
-PHOTO = "https://telegra.ph/file/23db949e5f1aaf1b44889.jpg"
+PHOTO = "https://telegra.ph/file/99159b19829426dc8bc47.jpg"
 
 @register(pattern=("/gamma"))
 async def awake(event):
