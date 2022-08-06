@@ -99,16 +99,16 @@ def addsudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This member is already a Friend")
+        message.reply_text("𝚃𝚑𝚒𝚜 𝚖𝚎𝚖𝚋𝚎𝚛 𝚒𝚜 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚊 𝙷𝙰𝚂𝙷𝙸𝚁𝙰. ")
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested HA to promote a Servant to Friend."
+        rt += "𝙳𝙴𝙼𝙾𝙽 𝙺𝙸𝙽𝙶 𝚙𝚛𝚘𝚖𝚘𝚝𝚎𝚍 𝚊 𝙻𝙾𝚆𝙴𝚁𝙼𝙾𝙾𝙽 𝚝𝚘 𝙷𝙰𝚂𝙷𝙸𝚁𝙰."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote a Slave to Friend."
+        rt += "𝙳𝙴𝙼𝙾𝙽 𝙺𝙸𝙽𝙶 𝚙𝚛𝚘𝚖𝚘𝚝𝚎𝚍 𝚊 𝙳𝙴𝙼𝙾𝙽 𝚝𝚘 𝙷𝙰𝚂𝙷𝙸𝚁𝙰."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -120,13 +120,13 @@ def addsudo(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt
-        + "\nSuccessfully promoted {} to Friend!".format(
+        + "\n𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 𝚙𝚛𝚘𝚖𝚘𝚝𝚎𝚍 {} 𝚝𝚘 𝙷𝙰𝚂𝙷𝙸𝚁𝙰.".format(
             user_member.first_name
         )
     )
 
     log_message = (
-        f"#Friend\n"
+        f"#Hashira\n"
         f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         f"<b>User:</b> {mention_html(user_member.id, html.escape(user_member.first_name))}"
     )
