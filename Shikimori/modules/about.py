@@ -1,41 +1,31 @@
 """
 STATUS: Code is working. ✅
 """
-
 """
 GNU General Public License v3.0
-
 Copyright (C) 2022, SOME-1HING [https://github.com/SOME-1HING]
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
-
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
-
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-
 import time
 from Shikimori.modules.helper_funcs.readable_time import get_readable_time
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.utils.helpers import escape_markdown
 from telegram.ext import CallbackContext, CallbackQueryHandler
 from Shikimori import ANIME_NAME, BOT_USERNAME, NETWORK, NETWORK_USERNAME, START_MEDIA, SUPPORT_CHAT, UPDATE_CHANNEL, StartTime, dispatcher
-
 bot_name = f"{dispatcher.bot.first_name}"
-
 PM_START_TEXT = f"""
 \nI am *{bot_name}* , a group management bot based on the anime *{ANIME_NAME}*![ ]({START_MEDIA})
-
 *Click on the Commands Button below to go through my commands.*
 """
-
 buttons = [
     [
         InlineKeyboardButton(
@@ -52,18 +42,15 @@ buttons = [
     ], 
 ]
 
-network_name = NETWORK_USERNAME.lower()
-
 try:
-    if network_name == "sernxnetwork":
-        HMMM = InlineKeyboardButton(text="⡷⠂SΞЯИ⠐⢾ THE ORGANIZATION✧", callback_data="sern_")
+    if NETWORK_USERNAME == "VoidxNetwork":
+        HMMM = InlineKeyboardButton(text="【V๏ɪ፝֟𝔡】 ✧Network✧", callback_data="void_")
     elif NETWORK:
         HMMM = InlineKeyboardButton(text=f"{NETWORK}", url=f"https://t.me/{NETWORK_USERNAME}")
     else:
         HMMM = None
 except:
     HMMM = None
-
 def Shikimori_about_callback(update, context):
     query = update.callback_query
     if query.data == "Shikimori_":
@@ -80,12 +67,12 @@ def Shikimori_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton(text="Github", callback_data="github_"),
-                    InlineKeyboardButton(text="License", callback_data="license_"),
+                    InlineKeyboardButton(text="Owner", callback_data="github_"),
+                    InlineKeyboardButton(text="Xiao Bot", callback_data="license_"),
                     ],
                     [
                     HMMM,
-                    InlineKeyboardButton(text="Documentation", url="https://some1hing.gitbook.io/shikimori-bot/"),
+                    InlineKeyboardButton(text="Stats", url="https://t.me/doumaupdates/10"),
                     ],
                     [
                     InlineKeyboardButton(text="Back", callback_data="Shikimori_back"),
@@ -93,7 +80,6 @@ def Shikimori_about_callback(update, context):
                 ]
             ),
         )
-
     elif query.data == "Shikimori_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
@@ -107,19 +93,18 @@ def Shikimori_about_callback(update, context):
                 timeout=60,
                 disable_web_page_preview=False,
         )
-
 def git_call_back(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "github_":
         query.message.edit_text(
-            text=f"Orginal Repositiory created by [SOME1HING](https://github.com/SOME-1HING) on [github](https://github.com/SOME-1HING/ShikimoriBot) for [Shikimori Bot](https://t.me/micchon_shikimori_bot)",
+            text=f"OWNER OF THE BOT SILVER_KING AND ABOUT HIM",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton(text="Repo", url="https://github.com/SOME-1HING/ShikimoriBot"),
-                    InlineKeyboardButton(text="Creator", url="https://github.com/SOME-1HING"),
+                    InlineKeyboardButton(text="Owner", url="https://t.me/silver_king"),
+                    InlineKeyboardButton(text="About Owner", url="https://t.me/silveryashiro_kun"),
                     ],
                     [
                     InlineKeyboardButton(text="Back", callback_data="Shikimori_"),
@@ -141,20 +126,20 @@ def git_call_back(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
         )
 
-def sern_call_back(update: Update, context: CallbackContext):
+def void_call_back(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "sern_":
+    if query.data == "void_":
         query.message.edit_text(
-            text=f"ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ 𝘚𝘌𝘙𝘕𝘹𝘕𝘦𝘵𝘸𝘰𝘳𝘬 (http://t.me/sernxnetwork), 𝙎𝙀𝙍𝙉 𝙞𝙨 𝙖𝙣 𝙖𝙣𝙞𝙢𝙚 𝙗𝙖𝙨𝙚𝙙 𝘾𝙤𝙢𝙢𝙪𝙣𝙞𝙩𝙮 𝙬𝙞𝙩𝙝 𝙖 𝙢𝙤𝙩𝙞𝙫𝙚 𝙩𝙤 𝙨𝙥𝙧𝙚𝙖𝙙 𝙡𝙤𝙫𝙚 𝙖𝙣𝙙 𝙥𝙚𝙖𝙘𝙚 𝙖𝙧𝙤𝙪𝙣𝙙 𝙩𝙚𝙡𝙚𝙜𝙧𝙖𝙢. 𝙂𝙤 𝙩𝙝𝙧𝙤𝙪𝙜𝙝 𝙩𝙝𝙚 𝙘𝙝𝙖𝙣𝙣𝙚𝙡 𝙖𝙣𝙙 𝙟𝙤𝙞𝙣 𝙩𝙝𝙚 𝘾𝙤𝙢𝙢𝙪𝙣𝙞𝙩𝙮, 𝙞𝙛 𝙞𝙩 𝙙𝙧𝙖𝙬𝙨 𝙮𝙤𝙪𝙧 𝙖𝙩𝙩𝙚𝙣𝙩𝙞𝙤𝙣.",
+            text=f"Welcome to **[【V๏ɪ፝֟𝔡】 ✧Network✧](https://t.me/voidxnetwork)** \n\n◈ Void is an anime based Community with a motive to spread love and peace around telegram. Go through the channel and join the Community if it draws your attention. ◈",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="⡷⠂SΞЯИ⠐⢾ THE ORGANIZATION", url="https://t.me/sernxnetwork")],
                 [
-                InlineKeyboardButton(text="★彡[ᴜꜱᴇʀ ᴛᴀɢ]彡★", url="https://t.me/SERNXNETWORK/31"),
-                InlineKeyboardButton(text="★彡[ᴏᴜʀ ꜱᴛᴀꜰꜰ]彡★", url="https://t.me/SERNXNETWORK/38")
+                InlineKeyboardButton(text="【Usertag】", url="https://t.me/void_network/103"),
+                InlineKeyboardButton(text="【Owner Sama】", url="https://t.me/voidAryan")
                 ],
+                [InlineKeyboardButton(text="【V๏ɪ፝֟𝔡】Network", url="https://t.me/voidxnetwork")],
                 [InlineKeyboardButton(text="Back", callback_data="Shikimori_")]
             ]
             ),
@@ -172,7 +157,6 @@ def sern_call_back(update: Update, context: CallbackContext):
                 timeout=60,
                 disable_web_page_preview=False,
         )
-
 def license_call_back(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "license_":
@@ -183,7 +167,7 @@ def license_call_back(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton(text="License", url="https://github.com/SOME-1HING/ShikimoriBot/blob/master/LICENSE"),
+                    InlineKeyboardButton(text="Xiao", url="https://t.me/xiaoxrobot"),
                     ],
                     [
                     InlineKeyboardButton(text="Back", callback_data="Shikimori_"),
@@ -213,11 +197,11 @@ license_call_back_handler = CallbackQueryHandler(
 git_call_back_handler = CallbackQueryHandler(
     git_call_back, pattern=r"github_", run_async=True
 )
-sern_call_back_handler = CallbackQueryHandler(
-    sern_call_back, pattern=r"sern_", run_async=True
+void_call_back_handler = CallbackQueryHandler(
+    void_call_back, pattern=r"void_", run_async=True
 )
 
-dispatcher.add_handler(sern_call_back_handler)
+dispatcher.add_handler(void_call_back_handler)
 dispatcher.add_handler(git_call_back_handler)
 dispatcher.add_handler(about_callback_handler)
 dispatcher.add_handler(license_call_back_handler)
