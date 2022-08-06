@@ -67,6 +67,7 @@ from Shikimori.modules.log_channel import gloggable, loggable
 
 BAN_GIF = "CgACAgUAAxkBAAK0XGLeQb3hs3yWorkBjUMFGMWENA8RAALZBAACT_vxVu249YEwNBU9KQQ"
 KICK_GIF = "CgACAgUAAxkBAAK0X2LeQev25-iVt1uCqZ2GMRpe-tnGAALbBAACT_vxVjmenxs25dq2KQQ"
+BANG_GIF = "CgACAgQAAxkBAAJyYmLt3hkpuws8XWyegaQ6lTF47FfCAAIVDAAC85kQU8XafqkQ4XkYKQQ"
 
 @connection_status
 @bot_admin
@@ -114,22 +115,28 @@ def ban(update: Update, context: CallbackContext) -> str:
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
             message.reply_text("Trying to put me against my own bot huh, BITCH?")
+            bot.send_animation(chat.id, BANG_GIF)
         elif user_id in DEV_USERS:
             message.reply_text("I can't act against Chrome.")
+            bot.send_animation(chat.id, BANG_GIF)
         elif user_id in DRAGONS:
             message.reply_text(
                 "Fighting Gen will put villager's lives at risk."
             )
+            bot.send_animation(chat.id, BANG_GIF)
         elif user_id in DEMONS:
             message.reply_text(
                 "Bring an order from Captain to fight a Assasin servant."
             )
+            bot.send_animation(chat.id, BANG_GIF)
         elif user_id in TIGERS:
             message.reply_text(
                 "Bring an order from Soldier to fight a Lancer servant."
             )
+            bot.send_animation(chat.id, BANG_GIF)
         elif user_id in WOLVES:
             message.reply_text("Trader access make them ban immune!")
+            bot.send_animation(chat.id, BANG_GIF)
         else:
             message.reply_text("⚠️ Cannot banned admin.")
         return log_message
