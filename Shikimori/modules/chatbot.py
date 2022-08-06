@@ -193,5 +193,4 @@ __help__ = """
 *Admins only Commands*:
   ➢ `/Chatbot`*:* Shows chatbot control panel
 
-*Thx @mizuhara_chan1 for the API*
 """
