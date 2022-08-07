@@ -26,8 +26,8 @@ from Shikimori import DEV_USERS, OWNER_ID, telethn
 from telethon import events, Button
 from telegram import ParseMode
 
-BUTTON = [[Button.url("❓ What Is This", "https://t.me/Shikimori_bot_Updates/34")]]
-COMET = "https://telegra.ph/file/713fbfbdde25cc1726866.mp4"
+BUTTON = [[Button.url("❓ What Is This", "https://t.me/doumaupdates/15")]]
+COMET = "https://telegra.ph/file/f8f1aaba3ffd534a96ad1.mp4"
 STAR = "https://telegra.ph/file/ad90b44c551cec31df76b.mp4"
 WISH = """
 **You can use** `/wish` **as a general Wishing Well of sorts**
