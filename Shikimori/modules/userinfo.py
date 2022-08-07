@@ -143,7 +143,7 @@ def hpmanager(user):
 
 def make_bar(per):
     done = min(round(per / 10), 10)
-    return "❤" * done + "♡" * (10 - done)
+    return "■" * done + "□" * (10 - done)
 
 
 def get_id(update: Update, context: CallbackContext):
@@ -237,6 +237,7 @@ def gifid(update: Update, context: CallbackContext):
 
 
 def info(update: Update, context: CallbackContext):
+    VOID_STAFF = 5589066429, 1719179612, 1054969108, 5254401163, 1586012267, 5093245818, 5514985164, 5328807335
     bot, args = context.bot, context.args
     message = update.effective_message
     chat = update.effective_chat
@@ -244,10 +245,10 @@ def info(update: Update, context: CallbackContext):
     [
                         InlineKeyboardButton(
                              text="Health",
-                             url="https://t.me/Shikimori_bot_Updates/9"),
+                             url="https://t.me/doumaupdates/7"),
                        InlineKeyboardButton(
                              text="Disasters",
-                             url="https://t.me/Shikimori_bot_Updates/6"),
+                             url="https://t.me/doumaupdates/8"),
                     ],
     ]
     user_id = extract_user(update.effective_message, args)
@@ -311,22 +312,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person is my 'Owner'."
+        text += "\n\n𝙾𝚆𝙽𝙴𝚁 𝙾𝙵 𝚃𝙷𝙴 𝙱𝙾𝚃.\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝙳𝙴𝙼𝙾𝙽 𝙺𝙸𝙽𝙶."
     elif user.id in DEV_USERS:
-        text += "\n\nThis person is my 'Best Friend'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝚄𝙿𝙿𝙴𝚁𝙼𝙾𝙾𝙽."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis person is my 'Friend'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝙷𝙰𝚂𝙷𝙸𝚁𝙰."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis person is my 'Servant'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝙻𝙾𝚆𝙴𝚁𝙼𝙾𝙾𝙽"
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThis person is just a 'Peasant'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝙳𝙴𝙼𝙾𝙽 𝚂𝙻𝙰𝚈𝙴𝚁."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis person is just a 'Slave'."
+        text += "\n\n𝚁𝙰𝙽𝙺𝙴𝙳 𝙰𝚂 𝙳𝙴𝙼𝙾𝙽."
         disaster_level_present = True
+        
+    if user.id in VOID_STAFF:
+        text += "\n\n𝚃𝙷𝙸𝚂 𝚄𝚂𝙴𝚁 𝙸𝚂 𝙰 𝚂𝚃𝙰𝙵𝙵 𝙸𝙽 𝚅𝙾𝙸𝙳 𝙽𝙴𝚃𝚆𝙾𝚁𝙺."
+        disaster_level_present = False
 
 
     try:
