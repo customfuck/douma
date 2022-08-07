@@ -102,8 +102,8 @@ def stats(update, context):
                     [
                         [                  
                             InlineKeyboardButton(
-                                    text="REPO",
-                                    url="https://github.com/SOME-1HING/ShikimoriBot"),
+                                    text="【V๏ɪ፝֟𝔡】◈Network◈",
+                                    url="https://t.me/VoidxNetwork"),
                         ]
                     ]
                 ),
@@ -118,8 +118,8 @@ def stats(update, context):
                     [
                         [                  
                             InlineKeyboardButton(
-                                    text="REPO",
-                                    url="https://github.com/SOME-1HING/ShikimoriBot"),
+                                    text="【V๏ɪ፝֟𝔡】◈Network◈",
+                                    url="https://t.me/VoidxNetwork"),
                         ]
                     ]
                 ),
@@ -141,8 +141,8 @@ def stats(update, context):
                 [
                   [                  
                        InlineKeyboardButton(
-                                text="REPO",
-                                url="https://github.com/SOME-1HING/ShikimoriBot"),
+                                text="【V๏ɪ፝֟𝔡】◈Network◈",
+                                url="https://t.me/VoidxNetwork"),
                      ] 
                 ]
             ),
