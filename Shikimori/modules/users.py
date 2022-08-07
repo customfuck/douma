@@ -27,7 +27,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 from io import BytesIO
 from time import sleep
 
-from telegram import TelegramError, Update
+from telegram import ParseMode, TelegramError, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (
     CallbackContext,
@@ -101,27 +101,27 @@ def broadcast(update: Update, context: CallbackContext):
                 try:
                     context.bot.sendMessage(
                         int(chat.chat_id),
-                        to_send[1],
-                        parse_mode="MARKDOWN",
+                        escape_markdown(to_send[1], 2),
+                        parse_mode=ParseMode.MARKDOWN_V2,
                         disable_web_page_preview=True,
                     )
-                    sleep(0.1)
-                except TelegramError:
+                    sleep(1)
+                except TelegramError as e:
                     failed += 1
         if to_user:
             for user in users:
                 try:
                     context.bot.sendMessage(
                         int(user.user_id),
-                        to_send[1],
-                        parse_mode="MARKDOWN",
+                        escape_markdown(to_send[1], 2),
+                        parse_mode=ParseMode.MARKDOWN_V2,
                         disable_web_page_preview=True,
                     )
-                    sleep(0.1)
-                except TelegramError:
+                    sleep(1)
+                except TelegramError as e:
                     failed_user += 1
         update.effective_message.reply_text(
-            f"Broadcast complete.\nGroups failed: {failed}.\nUsers failed: {failed_user}."
+            f"Broadcast complete.\nGroups failed: {failed}.\nUsers failed: {failed_user}.",
         )
 
 
