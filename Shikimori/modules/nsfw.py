@@ -154,7 +154,7 @@ def nsfwwaifu(update, context):
     url = f"{url_nsfw}waifu" 
     result = requests.get(url).json()
     img = result['url']
-    msg.reply_photo(photo=img)
+    msg.reply_photo(img)
 
 def nsfwneko(update, context):
     chat_id = update.effective_chat.id
