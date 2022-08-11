@@ -986,7 +986,7 @@ def adminlist(update, context):
 @can_promote
 @user_admin
 @loggable
-@pbot.on(events.NewMessage)
+@pbot.on_Message(events.NewMessage)
 async def promoter(event):
   if 'jenny promote' in event.raw_text:
     bot = context.bot
