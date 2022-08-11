@@ -238,7 +238,7 @@ Following are the NSFW commands:
     ➢ `/spank`
     ➢ `/cosplay` - cosplay by @SILVER_KING
     
-"""h
+"""
 
 @pbot.on_message(filters.command('nsfw'))
 async def ass(_, message):
