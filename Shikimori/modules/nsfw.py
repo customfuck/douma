@@ -129,6 +129,19 @@ def trap(update, context):
     result = requests.get(url).json()
     img = result['url']
     msg.reply_photo(photo=img)
+   
+def cosplay(update, context):
+    chat_id = update.effective_chat.id
+    if not update.effective_message.chat.type == "private":
+        is_nsfw = sql.is_nsfw(chat_id)
+        if not is_nsfw:
+            msg.reply_text("NSFW is not activated!!\n\nUse '/addnsfw' to activate NSFW commands.")
+            return
+    msg = update.effective_message
+    url = f"{url_nsfw}cosplay" 
+    result = requests.get(url).json()
+    img = result['url']
+    msg.reply_photo(photo=img)
 
 def nsfwwaifu(update, context):
     chat_id = update.effective_chat.id
@@ -173,6 +186,7 @@ LIST_NSFW_CHATS_HANDLER = CommandHandler(
 NSFWWAIFU_HANDLER = CommandHandler(("nsfwwaifu", "nwaifu"), nsfwwaifu, run_async=True)
 BLOWJOB_HANDLER = CommandHandler(("blowjob", "bj"), blowjob, run_async=True)
 TRAP_HANDLER = CommandHandler("trap", trap, run_async=True)
+COSPLAY_HANDLER = CommandHandler("cosplay", cosplay, run_async=True)
 NSFWNEKO_HANDLER = CommandHandler(("nsfwneko", "nneko"), nsfwneko, run_async=True)
 SPANK_HANDLER = CommandHandler("spank", spank, run_async=True)
 
@@ -183,6 +197,7 @@ dispatcher.add_handler(NSFWWAIFU_HANDLER)
 dispatcher.add_handler(BLOWJOB_HANDLER)
 dispatcher.add_handler(SPANK_HANDLER)
 dispatcher.add_handler(TRAP_HANDLER)
+dispatcher.add_handler(COSPLAY_HANDLER)
 dispatcher.add_handler(NSFWNEKO_HANDLER)
 
 __handlers__ = [
@@ -196,6 +211,7 @@ __handlers__ = [
     SPANK_HANDLER,
     BLOWJOB_HANDLER,
     TRAP_HANDLER,
+    COSPLAY_HANDLER,
     NSFWNEKO_HANDLER
 ]
 
@@ -220,7 +236,9 @@ Following are the NSFW commands:
     ➢ `/nsfwneko`
     ➢ `/nneko`
     ➢ `/spank`
-"""
+    ➢ `/cosplay` - cosplay by @SILVER_KING
+    
+"""h
 
 @pbot.on_message(filters.command('nsfw'))
 async def ass(_, message):
