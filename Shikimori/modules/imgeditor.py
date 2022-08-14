@@ -242,4 +242,3 @@ __help__ = """
 ❍ `/editor` : To edit the imiage.
 Note: Remove BG doesn't work, dev will fix it later.
 """
-pbot.run()
