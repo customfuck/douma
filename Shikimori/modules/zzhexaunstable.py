@@ -17,7 +17,7 @@ def nexttour(update: Update, context: CallbackContext):
         msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
     )
     reply_text(
-        "COMING SOON",
+        "NO DATA",
     )
 
 def prizepool(update: Update, context: CallbackContext):
@@ -26,7 +26,7 @@ def prizepool(update: Update, context: CallbackContext):
         msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
     )
     reply_text(
-        "Prize pool for dice tour\n\n1st- 15k + X MOD FOR A MONTH\n2nd- 10k\n3rd- 5k",
+        "NO DATA",
     )
     
 NEXTTOUR_HANDLER = DisableAbleCommandHandler("nexttour", nexttour, run_async=True)
