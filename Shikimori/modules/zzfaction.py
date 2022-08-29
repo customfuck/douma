@@ -9,7 +9,7 @@ from Shikimori.events import register
 from Shikimori import telethn as tbot
 
 
-@register(pattern=("/factions"))
+@register(pattern=("/faction"))
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}).** \n\n"
   TEXT += "❍ **FACTIONS** \n\n"
