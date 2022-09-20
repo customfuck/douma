@@ -10,4 +10,4 @@ from telethon.tl.types import ChannelParticipantCreator
 async def my_event_handler(event):
   if event.sender_id == 572621020:
     if 'has challenged' in event.raw_text:
-        pinable = await client.pin_message(event.message_id, notify=true)
+        pinable = await client.pin_message(event.chat_id, event.message_id, notify=True)
