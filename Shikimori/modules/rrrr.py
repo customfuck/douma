@@ -23,7 +23,6 @@ import sqlite3
 import contextlib
 import telethon
 import telethon.sync
-from PIL import 
 
 
 
